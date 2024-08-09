@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Telepathy Infotech Newsletter</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            height: 100%;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        .line-icon img::after {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+        .header {
+            padding-left: 10px;
+            margin-top: 15px;
+        }
+
+        .header img {
+            max-width: 150px;
+            height: 49px;
+            margin-top: 5px;
+        }
+
+        .content {
+            padding: 20px 0;
+
+        }
+
+        .content h1 {
+            color: #333;
+
+        }
+
+        .content p {
+            color: #666;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .service {
+            flex: 1 1 calc(50% - 10px);
+            border: 1px solid rgba(255, 0, 0, 0);
+            background-color: #00308F;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .service h2 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .service ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card-line {
+            width: 100%;
+            border: 1px #4C5BA5 solid;
+            margin-top: -5px;
+        }
+
+        .service ul li {
+            background-color: #efefef;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+
+        .footer {
+            background-color: #F9F9F9;
+            color: black;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .telepathy-logo {
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        .telepathy-logo img {
+            height: 49px;
+            width: 150px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            line-height: 1px;
+            padding: 10px;
+        }
+
+        .content-image {
+            background: linear-gradient(250.29deg, #003d38bb 4.15%, #121159bb 89.38%), url(head.jpeg);
+            background-position: center;
+            background-size: cover;
+            height: 322px;
+            width: auto;
+            border: 2px solid rgba(172, 255, 47, 0);
+            text-align: center;
+            color: white;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .content-image h1 {
+            text-align: center;
+            color: white;
+            font-size: 32px;
+        }
+
+        .content-image h1 span {
+            display: block;
+            z-index: 1;
+            position: relative;
+        }
+
+        .business-segment h2 {
+            text-align: center;
+            font-size: 24px;
+            padding-top: 20px;
+            padding: 5px;
+        }
+
+        .business-segment p {
+            margin-top: -25px;
+            text-align: center;
+        }
+
+        .business-segment {
+            background-color: #F9F9F9;
+        }
+
+        .service-card {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        .service-card1 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: center;
+            gap: 23px;
+
+        }
+
+        .service-card2 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        .service-typei a {
+            text-decoration: none;
+        }
+
+        .service-type-text {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: normal;
+            list-style: none;
+            font-weight: 300;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .service-type {
+            text-align: center;
+            height: 100%;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .service-card1 {
+            list-style: none;
+        }
+
+        hr {
+            margin-top: -3px;
+        }
+
+        .service-type a {
+            text-decoration: none;
+            padding: 1px;
+        }
+
+        .service-type img {
+            height: 52px;
+            width: 80px;
+        }
+
+        .service h2 {
+            color: white;
+        }
+
+        .service-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           padding: 10px;
+            margin-top: 8px;
+        }
+
+        .software-product-stage a {
+            text-decoration: none;
+        }
+
+        .software-product-main h2 {
+            text-align: start;
+            padding: 20px;
+        }
+
+        .software-product-main p {
+            margin-top: -30px;
+            padding: 0;
+            padding-left: 20px;
+            padding-right: 2%;
+        }
+
+        .software-product-stage li {
+            margin-top: 10px;
+            color: black;
+            font-weight: 500;
+        }
+
+        .domain {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            background-color: #B5E152;
+            border-radius: 15px;
+            width: auto;
+            justify-content: center;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 40px;
+        }
+
+        .domain1 {
+            display: flex;
+        }
+
+        .domain1 li {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+
+        .domain h4 {
+            text-align: center;
+        }
+
+        .second-heading h1 span {
+            display: inline-block;
+            position: relative;
+        }
+
+        .second-heading h4 span {
+            display: inline-block;
+            position: relative;
+            padding: 2px;
+        }
+
+        .second-heading img {
+            display: block;
+            margin: -10px auto 0;
+            z-index: 1;
+        }
+
+        .second-heading1 img {
+            display: block;
+            margin: -15px auto 0;
+            z-index: 1;
+
+        }
+
+        .domain-experties {
+            height: 160px;
+            width: 100%;
+            margin-top: -25px;
+        }
+
+        .domain-experties li {
+            line-height: 23px;
+        }
+
+        .domain-experties a {
+            color: black;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .info {
+            margin-top: 15px;
+
+        }
+
+        .copyright {
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+        }
+
+        .copyright-info {
+            font-size: 12px;
+            color: black;
+        }
+
+        .copyright-info a {
+            color: blue;
+        }
+
+        .header-buttom {
+            display: flex;
+            justify-content: center;
+            line-height: 40px;
+            gap: 30px;
+        }
+
+        .phone-no {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid gray;
+            border-radius: 50px;
+            height: 22px;
+            width: 22px;
+            margin-right: 1rem;
+        }
+
+        .phone a {
+            text-decoration: none;
+        }
+
+        .phone-icon {
+            height: 15px;
+            width: 15px;
+        }
+
+        .email-id {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid gray;
+            border-radius: 50px;
+            height: 22px;
+            margin-right: 1rem;
+            width: 22px;
+        }
+
+        .email-id a {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .Email {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Email a {
+            text-decoration: none;
+        }
+
+        .email-icon {
+            height: 15px;
+            width: 15px;
+        }
+
+        .Email a {
+            color: black;
+        }
+
+        .phone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .phone a {
+            color: black;
+        }
+
+        .content-image h2 {
+            border: 1px solid white;
+            border-radius: 50px;
+            /* text-align: center; */
+            width: 60%;
+        }
+
+        .copyright-info {
+            display: flex;
+            padding: 0;
+            padding-left: 18px;
+        }
+
+        .line {
+            border: 1px solid gray;
+            margin-top: -2px;
+            width: 100%;
+        }
+
+        button {
+            border-bottom: solid 1px gray;
+            width: 600px;
+        }
+
+        .service-icon h2 {
+            font-weight: 400;
+            font-size: 18px;
+            height: 23px;
+            margin-top: -10px;
+            padding-top: 5px;
+        }
+
+        .software-product-stage ::marker {
+            color: #00308F;
+        }
+      
+
+        @media (max-width: 600px) {
+            .service {
+                flex: 1 1 100%;
+            }
+
+            .domain {
+                display: flex;
+            }
+
+            .domain1 {
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: center;
+
+            }
+
+            .copyright {
+                display: block;
+            }
+
+            .domain-experties {
+                line-height: 20px;
+            }
+
+            .header-top {
+                display: block;
+                line-height: 5px;
+            }
+
+            .second-heading1 img {
+                display: block;
+                margin: -15px auto 0;
+                z-index: 1;
+                width: 60%;
+                margin-top: -10px;
+
+            }
+
+            .service-icon h2 {
+                font-size: 14px;
+            }
+
+            .header-buttom {
+                display: block;
+                line-height: 30px;
+            }
+
+            .content-image h1,
+            h2 {
+                font-size: 20px;
+            }
+
+            .service-card {
+                display: block;
+            }
+
+            .service-card1 {
+                display: block;
+
+            }
+
+            .service-card2 {
+                display: block;
+            }
+
+            .service-type {
+                width: 45%;
+                float: right;
+            }
+
+
+            .container {
+                width: 100%;
+            }
+
+            .copyright-info {
+                text-align: center;
+                display: block;
+            }
+
+            .footer-social-icons {
+                display: block !important;
+
+            }
+
+            .Email-social-icon {
+                display: inline-block;
+            }
+
+            .top {
+                margin-top: 15px;
+            }
+           
+        }
+        @media (min-width: 400px) and (max-width:600px) {
+            .domain1 {
+                display: grid;  
+                grid-template-columns: 50% 50%;            
+            }  
+            .content-image h2{
+                font-size: 15px;
+            }          
+
+        }
+        @media (max-width:400px) {
+            .domain1 {
+                display: block;          
+            }  
+            .content-image h2{
+                font-size: 15px;
+            }           
+
+        }
+        @media (max-width:400px){
+            .content-image h2{
+                font-size: 12px;
+            }   
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-top">
+            <div class="phone">
+                <div class="phone-no">
+                    <svg fill="#000000" class="phone-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.71,16.29l-.15-.12a.76.76,0,0,0-.18-.09L12.2,16a1,1,0,0,0-.91.27,1.15,1.15,0,0,0-.21.33,1,1,0,0,0,1.3,1.31,1.46,1.46,0,0,0,.33-.22,1,1,0,0,0,.21-1.09A1,1,0,0,0,12.71,16.29ZM16,2H8A3,3,0,0,0,5,5V19a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-1,1H8a1,1,0,0,1-1-1V5A1,1,0,0,1,8,4h8a1,1,0,0,1,1,1Z" />
+                    </svg>
+                </div>
+                <a href="tel:+ 91 - 141- 437 6543">
+                    <p>+91 141 4376 543</p>
+                </a>
+            </div>
+            <div class="Email">
+                <div class="email-id">
+                    <svg class="email-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm3.519 0L12 11.671 18.481 6H5.52zM20 7.329l-7.341 6.424a1 1 0 0 1-1.318 0L4 7.329V18h16V7.329z"
+                            fill="#0D0D0D" />
+                    </svg>
+                </div>
+                <a href="mailto:sales@telepathyinfotech.com">sales@telepathyinfotech.com</a>
+            </div>
+        </div>
+        <hr>
+        <div class="header">
+            <a href="#">
+                <img src="telepaty-logo.png" alt="Telepathy Infotech Logo">
+            </a>
+        </div>
+        <div class="content">
+            <div class="content-image">
+                <div class="second-heading1">
+                    <h1>Technology Solutions to Help <span class="line-icon">
+                            Businesses Flourish
+                        </span>
+                        <img src="heading_line.png" alt="">
+                    </h1>
+
+                </div>
+                <h2>Call Us: <span style="color: #D7FF39;">+1(518)823-6750</span></h2>
+            </div>
+
+            <p>For over two decades, Telepathy has ideated and implemented advanced and integrated technology solutions
+                to address business challenges and maximize business growth. Our offerings span business and technology
+                consulting, application services, custom software development, maintenance, re-engineering, independent
+                testing, and validation services. Every client is important to us, and we do our best to measure up to
+                their expectations. Telepathy endeavours to provide quality services to both its domestic and
+                international clients. Telepathy is committed to customer satisfaction, and we assume the responsibility
+                of staying on schedule and within the budget up to the optimum possible level at all times.</p>
+            <div class="business-segment">
+                <h2>Telepathy Business Segment</h2>
+                <p>We are having highly skilled and professional team who works dedicatedly for our two different
+                    segments (Service Based & Product Based)</p>
+                <div class="services">
+                    <div class="service">
+                        <div class="service-heading">
+                            <div class="service-icon">
+                                <h2>Your Idea Our Solution</h2>
+                            </div>
+                            <div class="service-icon">
+                                <img src="check-icon.png" alt="">
+                            </div>
+                        </div>
+                        <hr class="card-line">
+                        <div class="service-card">
+
+                            <div class="service-type">
+
+                                <a href="#"><img src="CustomSoftware.png" alt="">
+                                    <div class="service-type-text">Custom Software <br>Development</div>
+                                </a>
+                            </div>
+                            <div class="service-type">
+                                <a href="#"><img src="website_ecommerce.png" alt="">
+                                    <div class="service-type-text">Website, <br>Ecommerce & CMS</div>
+                                </a>
+                            </div>
+                            <div class="service-type">
+                                <a href="#"><img src="design_branding.png" alt="">
+                                    <div class="service-type-text">Design, Branding <br> & SEO</div>
+                                </a>
+                            </div>
+                            <div class="service-type">
+                                <a href="#"><img src="Cuttingedge_solution.png" alt="">
+                                    <div class="service-type-text">Cutting Edge <br>Solution</div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="service-card2">
+                            <div class="service-type">
+                                <a href="#"><img src="DevOpsSolution.png" alt="">
+                                    <div class="service-type-text">DevOps Solution</div>
+                                </a>
+                            </div>
+                            <div class="service-type">
+                                <a href="#"><img src="OpenSource.png" alt="">
+                                    <div class="service-type-text">Open Source, <br>IoT & AI</div>
+                                </a>
+                            </div>
+                            <div class="service-type">
+                                <a href="#"><img src="MobileApps.png" alt="">
+                                    <div class="service-type-text">Mobile Apps</div>
+                                </a>
+                            </div>
+                            <div class="service-type">
+                                <a href="#"><img src="StaffAugmentation.png" alt="">
+                                    <div class="service-type-text">Staff Augmentation</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service">
+
+                        <div class="service1">
+                            <div class="service-heading">
+                                <div class="service-icon">
+                                    <h2>Tailor made products available</h2>
+                                </div>
+                                <div class="service-icon">
+                                    <img src="check-icon.png" alt="">
+                                </div>
+                            </div>
+                            <hr class="card-line">
+                            <div class="service-card">
+                                <div class="service-type">
+
+                                    <a href="#"><img src="iot.png" alt="">
+                                        <div class="service-type-text">Iot</div>
+                                    </a>
+                                </div>
+                                <div class="service-type">
+                                    <a href="#"><img src="RealEstate.png" alt="">
+                                        <div class="service-type-text">Real Estate</div>
+                                    </a>
+                                </div>
+                                <div class="service-type">
+                                    <a href="#"><img src="Education.png" alt="">
+                                        <div class="service-type-text">Education</div>
+                                    </a>
+                                </div>
+                                <div class="service-type">
+                                    <a href="#"><img src="SocialPlatform.png" alt="">
+                                        <div class="service-type-text">Social Platform</div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="service-card1">
+                                <div class="service-type">
+                                    <a href="#"><img src="b2b.png" alt="">
+                                        <div class="service-type-text">B2B</div>
+                                    </a>
+                                </div>
+                                <div class="service-type">
+                                    <a href="#"><img src="erpForAll.png" alt="">
+                                        <div class="service-type-text">ERP For All</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="software-product-main">
+                <h2>We hire best people at all Software <br> Product Development Stages</h2>
+                <p>We are always excited to listen to new ideas from you and as one of the innovative solution provider
+                    worldwide; we create new levels of value through client’s businesses. Here is how we work together
+                    with our clients as one across different time zones. Below is our standard practice (steps) that we
+                    follow:</p>
+            </div>
+            <div class="software-product-stage">
+                <ul>
+                    <a href="#">
+                        <li>Market Research and Business Forecasting</li>
+                    </a>
+                    <a href="#">
+                        <li>Technical Project Planning and Prototyping</li>
+                    </a>
+                    <a href="#">
+                        <li>Documentation - Development Phase</li>
+                    </a>
+                    <a href="#">
+                        <li>Quality Analysis & Control</li>
+                    </a>
+                    <a href="#">
+                        <li>Security Testing (Cyber / VPAT and others)</li>
+                    </a>
+                    <a href="#">
+                        <li>Deployment - Legal Consulting</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="domain">
+                <div class="second-heading">
+                    <h4> <span> Domain Expertise </span> <img src="domainLine-icon.png" alt=""></h4>
+                </div>
+
+                <div class="domain1">
+                    <div class="domain-experties">
+                        <ul>
+                            <li>
+                                Manufacturing
+                            </li>
+                            <li>
+                                Real estate & property
+                            </li>
+                            <li>
+                                Education & elearning
+                            </li>
+                            <li>
+                                Fintech
+                            </li>
+                            <li>
+                                Market place
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="domain-experties">
+                        <ul>
+                            <li>
+                                Health care & fitness
+                            </li>
+                            <li>
+                                Social networking
+                            </li>
+                            <li>
+                                NGO
+                            </li>
+                            <li>
+                                Sports & events
+                            </li>
+                            <li>
+                                Health & wellness
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="domain-experties">
+                        <ul>
+                            <li>
+                                Media & entertainment
+                            </li>
+                            <li>
+                                Travel & hospitality
+                            </li>
+                            <li>
+                                Game & leisure
+                            </li>
+                            <li>
+                                Transportation
+                            </li>
+                            <li>
+                                Ecommerce, retail & b2b
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="telepathy-logo">
+                <img src="telepaty-logo.png" alt="">
+            </div>
+            <div class="header-buttom">
+                <div class="phone">
+                    <div class="phone-no">
+                        <svg fill="#000000" class="phone-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.71,16.29l-.15-.12a.76.76,0,0,0-.18-.09L12.2,16a1,1,0,0,0-.91.27,1.15,1.15,0,0,0-.21.33,1,1,0,0,0,1.3,1.31,1.46,1.46,0,0,0,.33-.22,1,1,0,0,0,.21-1.09A1,1,0,0,0,12.71,16.29ZM16,2H8A3,3,0,0,0,5,5V19a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-1,1H8a1,1,0,0,1-1-1V5A1,1,0,0,1,8,4h8a1,1,0,0,1,1,1Z" />
+                        </svg>
+
+                    </div>
+                    <a href="tel:+ 91 - 141- 437 6543">
+                        <p>+91 1414376543</p>
+                    </a>
+                </div>
+                <div class="Email">
+                    <div class="email-id">
+                        <svg class="email-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm3.519 0L12 11.671 18.481 6H5.52zM20 7.329l-7.341 6.424a1 1 0 0 1-1.318 0L4 7.329V18h16V7.329z"
+                                fill="#0D0D0D" />
+                        </svg>
+
+                    </div>
+                    <a href="mailto:sales@telepathyinfotech.com">sales@telepathyinfotech.com</a>
+                </div>
+            </div>
+            <hr class="top">
+            <div class="copyright">
+                <div class="copyright-info">
+
+                    <p>Copyright © 2024 <a target="_blank" href="https://telepathyinfotech.com/">Telepathy Infotech Pvt
+                            Ltd </a>|
+                        Privacy Policy</p>
+
+                </div>
+                <div class="copyright-info footer-social-icons">
+                    <div class="Email-social-icon">
+                        <div class="email-id">
+                            <a href="#">
+                                <svg fill="#000000" width="15px" height="15px" viewBox="0 0 24 24" id="facebook"
+                                    data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color">
+                                    <path id="primary"
+                                        d="M14,6h3a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H14A5,5,0,0,0,9,7v3H7a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1H9v7a1,1,0,0,0,1,1h2a1,1,0,0,0,1-1V14h2.22a1,1,0,0,0,1-.76l.5-2a1,1,0,0,0-1-1.24H13V7A1,1,0,0,1,14,6Z"
+                                        style="fill: rgb(0, 0, 0);"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="Email-social-icon">
+                        <div class="email-id">
+                            <a href="#">
+                                <svg fill="#000000" width="15px" height="15px" viewBox="-2 -2 24 24" xmlns="
+                                        http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin"
+                                    class="jam jam-linkedin">
+                                    <path
+                                        d='M19.959 11.719v7.379h-4.278v-6.885c0-1.73-.619-2.91-2.167-2.91-1.182 0-1.886.796-2.195 1.565-.113.275-.142.658-.142 1.043v7.187h-4.28s.058-11.66 0-12.869h4.28v1.824l-.028.042h.028v-.042c.568-.875 1.583-2.126 3.856-2.126 2.815 0 4.926 1.84 4.926 5.792zM2.421.026C.958.026 0 .986 0 2.249c0 1.235.93 2.224 2.365 2.224h.028c1.493 0 2.42-.989 2.42-2.224C4.787.986 3.887.026 2.422.026zM.254 19.098h4.278V6.229H.254v12.869z' />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="Email-social-icon">
+                        <div class="email-id">
+                            <a style="color: black;" href=""><svg xmlns="http://www.w3.org/2000/svg" width="15px"
+                                    height="15px" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+</body>
+
+</html>
